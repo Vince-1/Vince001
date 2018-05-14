@@ -21,15 +21,52 @@ This is the master page of *pygate*  documentation
 
 API
 ===
-.. automodule: __init__
+.. autofunction:: __init__
 
 
 .. toctree::
    :titlesonly:
    
    file
+   file_list
    clist
+   make-mac
 
+
+
+.. autosummary::
+   :toctree: modules
+
+   pygate.analysis
+   pygate.api
+   pygate.api.cli
+   pygate.archive
+   pygate.archive.macs
+   pygate.cli
+   pygate.components
+   pygate.components.geometry
+   pygate.components.geometry.camera
+   pygate.components.templates
+   pygate.predefined
+   pygate.routine
+   pygate.utils
+
+
+.. toctree::
+   :hidden:
+   pygate.analysis
+   pygate.api
+   pygate.api.cli
+   pygate.archive
+   pygate.archive.macs
+   pygate.cli
+   pygate.components
+   pygate.components.geometry
+   pygate.components.geometry.camera
+   pygate.components.templates
+   pygate.predefined
+   pygate.routine
+   pygate.utils
 
 
 Indices and tables

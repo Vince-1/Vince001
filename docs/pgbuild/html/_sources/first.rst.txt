@@ -9,9 +9,8 @@ In this page,we will run a example consists of two steps;
 
 1. File ``main.mac`` generates.
 --------------------------------
-
-* Before a *GATE* process,we generally need to make a file of ``main.mac`` ,
-in which we can set the compomnents( *world,system,phantom,soure and digitizer etc.* ) for *GATE* simulation.
+ 
+* Before a *GATE* process,we generally need to make a file of ``main.mac`` ,in which we can set the compomnents( *world,system,phantom,soure and digitizer etc.* ) for *GATE* simulation.
 
 * The question is that the definition of compomnents is too heavy and complicated.
   A lot of time and ennergy wastes on this.
@@ -36,7 +35,7 @@ in which we can set the compomnents( *world,system,phantom,soure and digitizer e
 * However,it a repetable work for a *GATE* program to generate an event.*Pygate* offers a method to speed up the process.*Pygate* divides the task into a lot of parts,
 * then submits these parts to server.Each part of the original task will be distributed to no-wroking machine of the net by *SLurm*.Thus,we get a very high speed for *GATE* simulation. 
 * Users should know the following steps to archive it:
-    1. Users should get the needed configured files by excuting this command: ``$ pygate ini ext`` .You will get the files in folder: 
+    1. Users should get the needed configured files by excuting this command: ``$ pygate init ext`` .You will get the files in folder: 
         * ``main.mac`` ,you get it last in the fomer.
         * ``GateMaterials.db`` ,significant file for *GATE* configuration,can't be lack.
         * ``Hits2CSV.C`` ,may needed if you want the data of *csv* format.
@@ -56,5 +55,5 @@ in which we can set the compomnents( *world,system,phantom,soure and digitizer e
 
 
 
-
 You can refer the detail of commands in :ref:`Command List`
+

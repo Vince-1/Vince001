@@ -1,0 +1,2080 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>for function &#8212; Pygate 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Pygate 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="for-function">
+<h1>for function<a class="headerlink" href="#for-function" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cli">
+<h2>cli<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="main-py">
+<h3>main.py<a class="headerlink" href="#main-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>auto_sub()</li>
+<li>load_config(filename, is_no_config, dryrun)</li>
+<li>pygate(config, no_config, dryrun)</li>
+</ul>
+</div>
+<div class="section" id="analysis-py">
+<h3>analysis.py<a class="headerlink" href="#analysis-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>analysis_kernel(source, target, analysis_type, dryrun)</li>
+<li>predefined(name, source, output)</li>
+<li>script(target, source, output):</li>
+</ul>
+</div>
+<div class="section" id="clean-py">
+<h3>clean.py<a class="headerlink" href="#clean-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>clean_kernel(is_subdirectories, subdirectory_patterns: Iterable[str],</dt>
+<dd>root_file_patterns: Iterable[str],
+is_slurm_outputs, dryrun: bool)</dd>
+</dl>
+</li>
+<li>clean(subdirectories, root_files, slurm_outputs)</li>
+</ul>
+</div>
+<div class="section" id="initialize-py">
+<h3>initialize.py<a class="headerlink" href="#initialize-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>init</li>
+<li><dl class="first docutils">
+<dt>generate</dt>
+<dd><ul class="first last">
+<li>mac_template(filename)</li>
+<li>shell_task_list(tasks)</li>
+<li>shell_run(filename,tasks,gate_version,shell,partition)</li>
+<li>shell_post_run(filename,tasks,gate_version,shell,partition)</li>
+<li>shell_post_run(filename,tasks,gate_version,shell,partition)</li>
+<li>shell()</li>
+<li>cfg(target,format)</li>
+<li>subdir(nb_split,sub_format)</li>
+<li>broadcast_kernel(files,subdirectory_patterns,dryrun)</li>
+<li>bcast(target, no_ext)</li>
+<li>external_to_copy()</li>
+<li>ext()</li>
+<li>auto()</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="mac-generate-py">
+<h3>mac_generate.py<a class="headerlink" href="#mac-generate-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>mac()</dt>
+<dd><ul class="first last">
+<li>script()</li>
+<li>predefined()</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="merge-py">
+<h3>merge.py<a class="headerlink" href="#merge-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Tasks</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename,method)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>merge_kernel(tasks:Iterable[Taks], subdir_pattern: Tterable[str],dryrun)</li>
+<li>merge(target, method)</li>
+</ul>
+</div>
+<div class="section" id="submit-py">
+<h3>submit.py<a class="headerlink" href="#submit-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Task</dt>
+<dd><ul class="first last">
+<li>__init__(self, broadcast=None,single=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>submit_kernel(taks:Iterable[Task],subdir_patterns:Iterable[str],duyrun)</li>
+<li>submit(broadcast,single)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="analysis">
+<h2>analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="init-py">
+<h3>__init__.py<a class="headerlink" href="#init-py" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="predifined-py">
+<h3>predifined.py<a class="headerlink" href="#predifined-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>gamma_energy_deposite_distribution(csv_filename, h5_filename)</li>
+</ul>
+</div>
+<div class="section" id="results-py">
+<h3>results.py<a class="headerlink" href="#results-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ParticleID(Enum)</li>
+<li>ColumnNames</li>
+<li><dl class="first docutils">
+<dt>ResultBase</dt>
+<dd><ul class="first last">
+<li>__init__(self,data=None)</li>
+<li>d(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Results(Resultbase)</dt>
+<dd><ul class="first last">
+<li>__init__(self,data:Tuple[ResultBase])</li>
+<li>map(self,func) -&gt; ‘Results’</li>
+<li>fileter(self,func) -&gt; ‘Results’</li>
+<li>call(self, fuc_name) -&gt; ‘Results’</li>
+<li>zip(self, r: ‘Results’)</li>
+<li>first(self) -&gt; ResultBase</li>
+<li>flatten(self) -&gt; ‘Results’</li>
+<li>merge(self) -&gt;ResultBase</li>
+<li>to_list(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>ResultsDask(ResultBase)</li>
+<li>ResulltsNamedTuple(ResultBase)</li>
+<li><dl class="first docutils">
+<dt>ResultsWithKeys(Results)</dt>
+<dd><ul class="first last">
+<li>__init__(self,data: Tuple[Tuple[str,ResultBase]]</li>
+<li>drop_keys(self) -&gt; Results</li>
+<li>to_dict(self)</li>
+<li>select(self,key)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ResultsWithUnknownKeys(ResultsDask)</dt>
+<dd><ul class="first last">
+<li>select(self,key)</li>
+<li>drop_keys(self) -&gt; ResultsDask</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Series(ResultBase)</dt>
+<dd><ul class="first last">
+<li>__init__(self,series: pd.Series)</li>
+<li>columns(self, <a href="#id1"><span class="problematic" id="id2">*</span></a>cols)</li>
+<li>position(self) -&gt; ‘Vec3’</li>
+<li>source_position(self) -&gt;’Vec3’</li>
+<li>energy_deposit(self) -&gt; float</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>DaraFrame(ResultBase)</dt>
+<dd><ul class="first last">
+<li>__init__(self, dataframe: pd.DataFrame)</li>
+<li>first(self, <a href="#id3"><span class="problematic" id="id4">*</span></a>columns) -&gt; Series</li>
+<li>split_row(self) -&gt; Results</li>
+<li>merge(self, r) -&gt; ‘DataFrame’</li>
+<li>to_event(self) -&gt; ‘Event’</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Vec3(ResultBase)</dt>
+<dd><ul class="first last">
+<li>__init__(self, x, y=Mone, z=None)</li>
+<li>x(self) -&gt; float</li>
+<li>y(self) -&gt; float</li>
+<li>z(self) -&gt; float</li>
+<li>to_list(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>EnergyDeposit(ResultBase)</dt>
+<dd><ul class="first last">
+<li>def __init__(self, position,energy)</li>
+<li>position(self)</li>
+<li>energy(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Event(DataFrame)</dt>
+<dd><ul class="first last">
+<li>__init__(self,dataframe: pd.DataFrame)</li>
+<li>source_position(self) -&gt; Vec3</li>
+<li>first_position(self) -&gt; Vec3</li>
+<li>incident_direction(self) -&gt; Vec3</li>
+<li>energy_deposit_list(self) -&gt; Results</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>CSVFile(ResultBase)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str)</li>
+<li>load(self) -&gt; DataFrame</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api">
+<h2>api<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>cli<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>__init__.py</div></blockquote>
+<hr class="docutils" />
+<div class="section" id="base-py">
+<h4>base.py<a class="headerlink" href="#base-py" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>CLI(click.MultiCommand)</dt>
+<dd><ul class="first last">
+<li>__init__(self)</li>
+<li>list_commands(self,ctx)</li>
+<li>get_command(self, ctx, name)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="commands-py">
+<h4>commands.py<a class="headerlink" href="#commands-py" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>_load_config(config)</li>
+<li>make_config()</li>
+<li>init(config,content)</li>
+<li>submit(config)</li>
+<li>merge(config)</li>
+<li>clean(config, content, dryrun)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="archive">
+<h2>archive<a class="headerlink" href="#archive" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="components">
+<h2>components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="geometry">
+<h3>geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="geometry-py">
+<h4>geometry.py<a class="headerlink" href="#geometry-py" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>GeometryPreInitialise(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, world:Volume)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>GeometryPostInitialise(ObjectWitheTempate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, surfaces)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Gemetry</dt>
+<dd><ul class="first last">
+<li>__init__(self, world:Volume)</li>
+<li>render_pre(self)</li>
+<li>render_post(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="phantom-py">
+<h4>phantom.py<a class="headerlink" href="#phantom-py" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Phantom(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, sensitive_detectors: Tuple[Volume]=())</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="surface-py">
+<h4>surface.py<a class="headerlink" href="#surface-py" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Surface(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, base: Volume, insert:Volume)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>SurfaceOerfectAPD(Surface)</li>
+<li>SurfaceRoughTeflonWrapped(Surface)</li>
+</ul>
+</div>
+<div class="section" id="volume-py">
+<h4>volume.py<a class="headerlink" href="#volume-py" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Repeater(ObjectWithTemplate)</li>
+<li><dl class="first docutils">
+<dt>RepeaterRing(Repeater)</dt>
+<dd><ul class="first last">
+<li>__init__(self, number)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>RepeaterLinear(Repeater)</dt>
+<dd><ul class="first last">
+<li>__init__(self, number, repeat_vector)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>RepeaterCubic(Repeater)</dt>
+<dd><ul class="first last">
+<li>__init__(self, scale: Vec3, repeat_vector: Vec3)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Volume(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, ,aterial=None, mother=None, position=None, unit=None, repeaters: Repeater=None)</li>
+<li>add_child(self, child)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Box(Volume)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, size, material=None, ,other=None, position=None,unit=None,repeaters: Repeater=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Cylinder(Volume)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, rmax, rmin=None, height=None,phi_start=None,delta_phi=NOne,material=None,mother=None,position=None,unit=None,repeaters: Repeater=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Sphere(Volume)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, rmax, rmin=None, phi_start=None,delta_phi=None,theta_start=None,delta_theta=None,material=None,mother=None,position=None,unit=None,repeaters:Repeater=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ImageRegularParamerisedVolume(Volume)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, image_file, range_file, material=None,mother=None,position=None, init=None,repeaters: Repeater=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Patch(Volume)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, patch_file, material=None,mmother=None,position=None, unit=None, repeater:Repeater=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="camera">
+<h4>camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id6">
+<h5>__init__.py<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="camera-py">
+<h5>camera.py<a class="headerlink" href="#camera-py" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Camera(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, system:System, sensitive_detectors:Tuple[Volume]=())</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="system-py">
+<h5>system.py<a class="headerlink" href="#system-py" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>System</dt>
+<dd><ul class="first last">
+<li>__init__(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>PETscanner(System)</dt>
+<dd><ul class="first last">
+<li>__init__(self,level1, level2, level3, level4, level5, sensitive_detectors=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ecat(System)</dt>
+<dd><ul class="first last">
+<li>__init__(self, block=None, crystal=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>CylindricalPET(System)</dt>
+<dd><ul class="first last">
+<li>__init__(self, rsector=None, module=None,submodule=None,crystal=None,layer0=None,layer1=None,layer2=None,layer3=NOne)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>MultiPatchPET(System)</dt>
+<dd><ul class="first last">
+<li>__init__(self, container, patch_list)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SPECThead(System)</dt>
+<dd><ul class="first last">
+<li>__init__(self,crystal,pixel=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpticalSystem(System)</dt>
+<dd><ul class="first last">
+<li>__init__(self, crystal,pixel = None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="template">
+<h3>template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="digitizer">
+<h4>digitizer<a class="headerlink" href="#digitizer" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>singles</dt>
+<dd><ul class="first last">
+<li>blurring.j2</li>
+<li>buffer.j2</li>
+<li>dead_time.j2</li>
+<li>holder.j2</li>
+<li>readout.j2</li>
+<li>singles.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>co_incidence_chain.j2</li>
+<li>co_incidence_sorter.j2</li>
+<li>insertable.j2</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h4>geometry<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>volume</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>repeater</dt>
+<dd><ul class="first last">
+<li>cubic.j2</li>
+<li>linear.j2</li>
+<li>repeater.j2</li>
+<li>ring.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>box.j2</li>
+<li>cylinder.j2</li>
+<li>image_sphere.j2</li>
+<li>sphere.j2</li>
+<li>volume.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>camera.j2</li>
+<li>geometry_post_init.j2</li>
+<li>geometry_pre_init.j2</li>
+<li>phantom.j2</li>
+<li>surface.j2</li>
+<li>system.j2</li>
+</ul>
+</div>
+<div class="section" id="misc">
+<h4>misc<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>database.j2</li>
+<li>verbose.j2</li>
+<li>visualisation.j2</li>
+</ul>
+</div>
+<div class="section" id="parameter">
+<h4>parameter<a class="headerlink" href="#parameter" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>aquisition</dt>
+<dd><ul class="first last">
+<li>aquisition.j2</li>
+<li>period.j2</li>
+<li>primaries.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>output</dt>
+<dd><ul class="first last">
+<li>output.j2</li>
+<li>root.j2</li>
+<li>sinogram.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>random_engine</dt>
+<dd><ul class="first last">
+<li>random_engine.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>parameter.j2</li>
+</ul>
+</div>
+<div class="section" id="physics">
+<h4>physics<a class="headerlink" href="#physics" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>cuts.j2</li>
+<li>list.j2</li>
+<li>model.j2</li>
+<li>physics.j2</li>
+<li>procrss.j2</li>
+</ul>
+</div>
+<div class="section" id="source">
+<h4>source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>angular</dt>
+<dd><ul class="first last">
+<li>angular.j2</li>
+<li>iso.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>particle</dt>
+<dd><ul class="first last">
+<li>gamma.j2</li>
+<li>particle</li>
+<li>position.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>shape</dt>
+<dd><ul class="first last">
+<li>annulus.j2</li>
+<li>circle.j2</li>
+<li>cylinder.j2</li>
+<li>ellipse.j2</li>
+<li>ellipsoid.j2</li>
+<li>rectangle.j2</li>
+<li>shape.j2</li>
+<li>sphere.j2</li>
+<li>voxelized.j2</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>source_list.j2</li>
+<li>source.j2</li>
+</ul>
+</div>
+<div class="section" id="simulation-j2">
+<h4>simulation.j2<a class="headerlink" href="#simulation-j2" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="test-j2">
+<h4>test.j2<a class="headerlink" href="#test-j2" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="utils-j2">
+<h4>utils.j2<a class="headerlink" href="#utils-j2" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="vec3-j2">
+<h4>vec3.j2<a class="headerlink" href="#vec3-j2" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>__init__.py<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id9">
+<h3>base.py<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ObjectWithTemplate(ObjectWithTemplateBase)</li>
+<li><dl class="first docutils">
+<dt>Renderable</dt>
+<dd><ul class="first last">
+<li>render(self) -&gt; str</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="digitizer-py">
+<h3>digitizer.py<a class="headerlink" href="#digitizer-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Insetable(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name=None, is_define_name=False, is_explicit_insert=True)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Singles(Insertable)</dt>
+<dd><ul class="first last">
+<li>__init__(self, plugins=None, name=’Singles’, is_define_name=False,is_explicit_insert=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>AdderCompton(Insetable)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name=’adderCompton’, is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Readout(Insertable)</dt>
+<dd><ul class="first last">
+<li>__init__(self,policy=None,depth=1,name=’readout’,is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Blurring(Insertable)</dt>
+<dd><ul class="first last">
+<li>__init__(self, law=None, resolution=0.15,eor=511, slope=None, name=’blurring’, is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Holder(Insetable)</dt>
+<dd><ul class="first last">
+<li>__init__(self,value,name=None, is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ThresHolder(Holder)</dt>
+<dd><ul class="first last">
+<li>__init__(self, value, name=’thresHolder’)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>UpHolder(Holder)</dt>
+<dd><ul class="first last">
+<li>__init__(self, value, name=’upholder’)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>TimeResolution(Insetable)</dt>
+<dd><ul class="first last">
+<li>__init__(self, resolution, name=None, is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>WithBuffer(Insertable)</dt>
+<dd><ul class="first last">
+<li>__init__(self, size=NOne, mode=NOne, name=NOne, is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>MemoryBuffer(WithBuffer)</dt>
+<dd><ul class="first last">
+<li>__init__(self, read_freq=NOne,size=None,mode=None,name=None,is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>DeadTimeMulti(WithBuffer)</dt>
+<dd><ul class="first last">
+<li>__init__(self, volume ,t , mode=None, buffer_size=None, buffer_mode=None, name=’deadtime’, is_define_name=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SingleChain(Singles)</dt>
+<dd><ul class="first last">
+<li>__init__(self, name, is_define_name=True)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>CoincidenceSorter(Insertable)</dt>
+<dd><ul class="first last">
+<li>__init__(self, input_=None,window=NOne,offset=None,name=’Coincidences’,is_define_name=False, is_explicit_insert=False)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>CoincidencesChanin(Insertable)</dt>
+<dd><ul class="first last">
+<li>__ini__(self,input1,input2,name,plugins=None,use_priority=None,conseve_all_event=None, is_define_name=True)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="misc-py">
+<h3>misc.py<a class="headerlink" href="#misc-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Verbose(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, physics=0,cuts=0,sd=0,action2=0,actor=0,step=0,error=0,warning=0,output=0,beam=0,volume=0,image=0,geometry=0,core=0,run=0,event=0,tracking=0)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>MateriaDatabase(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, path: str=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>MaterialDatabaseLocal(MaterialDatabase)</dt>
+<dd><ul class="first last">
+<li>__init__(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Visualisation(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, is_disable=True)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="parameter-py">
+<h3>parameter.py<a class="headerlink" href="#parameter-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Acquisition(ObjectWithTemplate)</li>
+<li><dl class="first docutils">
+<dt>AcquisitionPrimaries(Acquisition)</dt>
+<dd><ul class="first last">
+<li>__init__(self,number=10000)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>AcquisitionPeriod(Acquisition)</dt>
+<dd><ul class="first last">
+<li>__init__(self, start=0.0,end=1.0,step=1.0)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,file_name)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ascii(Output)</dt>
+<dd><ul class="first last">
+<li>__init__(self, file_name, hit=0, singles=0, coincidences=0)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Binary(Output)</dt>
+<dd><ul class="first last">
+<li>__init__(self,file_name,hit=0,singles=0, coincidence=0)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Root(Output)</dt>
+<dd><ul class="first last">
+<li>__init__(self,file_name，hit=None,singles=None,coincidences=None,optical=None,delay=NOne)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Sinogram(Output)</dt>
+<dd><ul class="first last">
+<li>__init__(self,file_name,input_,radial_bin=None,is_true_only=None,is_raw_output=NOne,tang_blurring=NOne,is_store,delay=None,si_store,scatter=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>RandomEngine(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,seed=’default’)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>RandomEngineRanlux64(RandomEngine)</li>
+<li>RandomEnginJamesRandom(RandomEngine)</li>
+<li>RandomEngineMersenneTwister(RandomEngine)</li>
+<li><dl class="first docutils">
+<dt>Parameter(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,random_engine,outputs: List[output],acquisition)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="physics-py">
+<h3>physics.py<a class="headerlink" href="#physics-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Model(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,particle=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>PenelopeModel(Model)</li>
+<li>StandarModel(Model)</li>
+<li>LivermoreModer(Model)</li>
+<li>LivermorePolarizeModel(Model)</li>
+<li><dl class="first docutils">
+<dt>PhysicsProcess(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, models=NOne)</li>
+<li>content_in_adding(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>PhotoElectric(PhysicsProcess)</li>
+<li>Compton(PhysicProcess)</li>
+<li>GammaConversion(PhysicsProcess)</li>
+<li><dl class="first docutils">
+<dt>RayleighScattering(PhysicsProcess)</dt>
+<dd><ul class="first last">
+<li>__init__(self, models=(PenelopeModel(),))</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ElectronIonisation(PhysicsProcess)</dt>
+<dd><ul class="first last">
+<li>__init__(self, models=(StandardModel(‘e-‘),StandardModel(‘e+’)))</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Bremsstrahlung(PhysicsProcess)</dt>
+<dd><ul class="first last">
+<li>__init__(self,models=(StandardModel(‘e-‘),StandardModel(‘e+’)))</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>PhysicsProcessWithoutModels(PhysicsProcess)</dt>
+<dd><ul class="first last">
+<li>__init__(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>PositronAnnihilation(PhysicsProcessWithoutModels)</li>
+<li>RadioactiveDecay(PhysicsProcessWithoutModels)</li>
+<li>OpticalAbsorption(PhysicsProcessWithoutModels)</li>
+<li>OpticalRayleigh(PhysicsProcessWithoutModels)</li>
+<li>OpticalBoundary(PhysicsProcessWithoutModels)</li>
+<li>OpticalMie(PhysicsProcessWithoutModels)</li>
+<li>OpticalWLS(PhysicsProcessWithoutModels)</li>
+<li>Scintillation(PhysicsProcessWithoutModels)</li>
+<li><dl class="first docutils">
+<dt>MultipleScattering(PhysicsProcessWithoutModels)</dt>
+<dd><ul class="first last">
+<li>__init__(self, particle)</li>
+<li>content_in_adding(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>EMultipleScattering(PhysicsProcessWithoutModels)</dt>
+<dd><ul class="first last">
+<li>__init__(self,particle)</li>
+<li>content_in_adding(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>PhysicsList(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,physics_processes:List[PhysicsProcess])</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Cuts(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,volume:Volume,cuts:TV(‘CutT’,float,Dict[Volume,float]),max_step: float=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Physics(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self, physics_list,cut_list)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="simulation-py">
+<h3>simulation.py<a class="headerlink" href="#simulation-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Simulation(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,geometry,physics,digitizers,source,paramerter,material_database=None,visualisation=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="source-py">
+<h3>source.py<a class="headerlink" href="#source-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Source(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,name,particle=None,activity=NOne,angle=None,shape=NOne,position:Vec3=None)</li>
+<li>unified_activity(self, activity)</li>
+<li>bind(self, obj)</li>
+<li>is_voxelized(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Particle(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>bind_source(self, source)</li>
+<li>__init__(self, unstable=None, halflife=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ParticlePositron(Particle)</dt>
+<dd><ul class="first last">
+<li>__init__(self, unstalble=True,halfife=6586)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ParticleGamma(Particle)</dt>
+<dd><ul class="first last">
+<li>__init__(self, unstable=True,halflife=6586.2,monoenergy=511,back2back=True)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Angular(ObjectWithTemplate)</li>
+<li><dl class="first docutils">
+<dt>Shape(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,dimension)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ShapePlane(Shape)</dt>
+<dd><ul class="first last">
+<li>__init__(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ShapeSurfaceOrVolume(Shape)</dt>
+<dd><ul class="first last">
+<li>__init__(self,dimension)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Voxelized(Shape)</dt>
+<dd><ul class="first last">
+<li>__init__(self,read_table,read_file,reader=’interfile’,translator=’range’,positon=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Cylinder(ShapeSurfaceOrVolume)</dt>
+<dd><ul class="first last">
+<li>__init__(self,radius,halfz,dimension)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Sphere(Shape)</dt>
+<dd><ul class="first last">
+<li>__init__(self,radius,dimension)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ellipsoid(Shape)</dt>
+<dd><ul class="first last">
+<li>__init__(self,half_sie:Vec3,dimension)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Circle(ShapePlane)</dt>
+<dd><ul class="first last">
+<li>__init__(slef,radius)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Annulus(ShapePlane)</dt>
+<dd><ul class="first last">
+<li>__init__(self,radius0,radius)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ellipse(ShapePlane)</dt>
+<dd><ul class="first last">
+<li>__init__(self,half_size)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Rectangle(ShapePlane)</dt>
+<dd><ul class="first last">
+<li>__init__(self,half_size)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SourceList(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,sources:List[Source])</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="utils-py">
+<h3>utils.py<a class="headerlink" href="#utils-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Vec3(ObjectWiTemplate)</dt>
+<dd><ul class="first last">
+<li>__init__(self,x,y,z,unit=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="predefined">
+<h2>predefined<a class="headerlink" href="#predefined" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>cylindricalPET(world: Volume, cylinder=None,rrh=None,head=None,rcb=None,block=None,rcc=None,crystal=None,lso=None,bgo=None)</li>
+<li>ecat(world: Volume, cylinder=None,rlb=None,rrb=None,block=None,rcc=None,crystal=None)</li>
+<li>opticalsystem(world: Volume,box=None,crystal=NOne,rcp=None,pixel=None)</li>
+<li>optical_gamma(world:Volume,crystal:VolumeLike)</li>
+<li>multipatchPET(world: Volume)</li>
+<li>optocal_surfaces(cam:Camera)</li>
+</ul>
+<ul class="simple">
+<li>voxelized_gamma(position,src_name=’voxelized_gamma’,read_table=’act_range.data’,read_file=’act.h33’)</li>
+<li>voxelized_F18(position,src_name=’voxelized_F18’,read_table=’act_range.dat,read_file=’act.h33’)</li>
+<li>cylinder_source(position=Vec3(0,0,0),src_name=’cylinder_source’,cylinder=None,activity=NOne,particle=None,angle=None)</li>
+<li>plane_source(psotion=Vec3(0,0,0),src_name=’plane_source’,rectangle=None,activity=None,particle=None,angle=None)</li>
+<li>sphere_source(position=Vec3(0,0,0),src_name=’sphere_source’,sphere=None,activity=None,particle=None,angle=None)</li>
+<li>make_default_source(simu_name)</li>
+<li>sphere(radius,position:Vec3=Vec3(0.0,0.0,0.0,’mm’),angle:Anular=None,activity:int=1000,particle=None,name=’sphere_source’) -&gt; SourceList</li>
+</ul>
+<ul class="simple">
+<li>ecat_digitizer(dtvolume, rdr=None.blur=None,thres=None,uph=None,ddt=None,coin=None,coin_delay=None,coin_chain=None)</li>
+<li>cylindricalPET_digitizer(rdr=None,blur=NOne,thres=None,uph=None,coin=NOne,coin_delay=None)</li>
+<li>optical_digitizer(rdr=None)</li>
+<li>spect_digitizer(blur=None,spblur=None,thres=None,uph=None)</li>
+</ul>
+<ul class="simple">
+<li>pet_parameters(acqu=AcquisitionPeriod(),outpits=None,rand=RandomEngine(seed=’auto’))</li>
+<li>optical_parameters(acqu=AcquisitionPrimaries(number=10000),outputs=None,rand=RandomEngineMersenneTwister(seed=’auto’))</li>
+<li>optical_gamma(nb_primaries)</li>
+</ul>
+<ul class="simple">
+<li>voxelized_phantom(world,image_file=’phan.h33’,range_file=’mat_range,dat’,position=None)</li>
+</ul>
+<ul class="simple">
+<li>pet_physics(cut_pair_list)</li>
+<li>optical_physics(cut_pari_list)</li>
+<li>gamma_physics(cut_pair_list)</li>
+<li>spect_physics(cut_pair_list)</li>
+</ul>
+<ul class="simple">
+<li>PredefinedSimulations(Enum)</li>
+<li>make_default_camera(simu_name,world: Volume)</li>
+<li>make_default_surfaces(simu_name,cam: Camera)</li>
+<li>make_default_physics(simu_name,cam:Camera,phan:Phantom,cut_pair_list=None)</li>
+<li>make_default_digitizer(simu_name, cam: Camera)</li>
+<li>make_default_parameter(simu_name)</li>
+<li>make_simulation(simu_name,geo=None,phy=None,digi=None,src=None,para=None)</li>
+<li>simulation(simulation_name:PredefinedSimulations,geometry=None,physics=None,digitizer=None,source=None,parameter=None)</li>
+<li>optical_gamma(source=None,world_size:Vec3=Vec3(400.0,400.0,400.0,’cm’),crystal_size:Vec3=Vec3(30.0,30.0,30.0,’mm’),crystal_position:Vec3=Vec3(0.0,0.0,0.0,’mm’),crystal_material:str=’LYSO’,nb_prmaries=10000)</li>
+</ul>
+</div>
+<div class="section" id="routine">
+<h2>routine<a class="headerlink" href="#routine" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>KEYS</li>
+<li>AnalysisType(Enum)</li>
+<li><dl class="first docutils">
+<dt>OperationAnalysis(OperationOnfile)</dt>
+<dd><ul class="first last">
+<li>__init(self, source_csv_filename, target_h5_filename, analysis_type:AnalysisType=None)</li>
+<li>source(self,r:RoutineOnDirectory)</li>
+<li>dryrun(self,r:RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Operation</dt>
+<dd><ul class="first last">
+<li>apply(self,routine)</li>
+<li>dryrun(self,routine)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Routine</dt>
+<dd><ul class="first last">
+<li>__init__(self,operation:Tterable[Operation]=(),dryrun=False,verbose=0)</li>
+<li>last_result(self)</li>
+<li>work(self)</li>
+<li>echo(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>RoutineOnDirectory(Routine)</li>
+<li><dl class="first docutils">
+<dt>OperationOnFile(Operation)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str)</li>
+<li>target(self,r:RoutineOnDirectory) -&gt; File</li>
+<li>dryrun(self,r:RountineOnDirectory)-&gt;Dict[str,Any]</li>
+<li>apply(self,r: RoutineOnDerectory) -&gt;Dict[str,Any]</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpeartionOnSubdirectories(Operation)</dt>
+<dd><ul class="first last">
+<li>__init__(self,patterns:Iterable[str])</li>
+<li>subdirectories(self, r: RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpeartionWithShellCall(Operation)</dt>
+<dd><ul class="first last">
+<li>call_args(self,r:Routine)</li>
+<li>stdout(self, r:Routine)</li>
+<li>run_child_program(self, r:Routine)</li>
+<li>apply(self,r:Routine)</li>
+<li>dryrun(self, r:Routine)-&gt;Dict[str, Iterable[str]]</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple">
+<li>KEYS</li>
+<li><dl class="first docutils">
+<dt>OpCleanSubdirectories(OperationOnSubdirectories)</dt>
+<dd><ul class="first last">
+<li>apply(self, r: RoutineOnDirectory)</li>
+<li>dryrun(self, r:RoutineOnDirectiory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpCleanSource(Operation)</dt>
+<dd><ul class="first last">
+<li>__init__(self,file_patterns:Iterable[str])</li>
+<li>files(self, r: RoutineOnDirectory)</li>
+<li>apply(self, r: RoutineInDirectory)</li>
+<li>dryrun(self,r: RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpCleanFilesInAllDirectories(OperationOnSubdirectories)</dt>
+<dd><ul class="first last">
+<li>__init__(self,file_patterns:Iterable[str],subdirectory_patterns:Iterable[str])</li>
+<li>files_on_directory(self,d:Directory)   <code class="docutils literal"><span class="pre">need</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">corrected(directroy-&gt;directory)</span></code></li>
+<li>to_remove(self,r:RoutineOnDirectory)</li>
+<li>apply(self,r:RoutineOnDirectory)</li>
+<li>dryrun(self,r:RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>routine_clean(source_patterns:Iterable[str]=(),is_subdir:bool=False,dryrun:bool=False)</li>
+</ul>
+<ul class="simple">
+<li>KEYS</li>
+<li><dl class="first docutils">
+<dt>TargetFileWithContent</dt>
+<dd><ul class="first last">
+<li>__init__(self,target: TypeVar(‘FileLike’,File,str).is_to_broadcast:bool=True,content:str=None)</li>
+<li>to_dict(self)</li>
+<li>save(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpAddToBroadcastFile(OperationOnFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename)</li>
+<li>apply(self,r: RoutineOnDirectory)</li>
+<li>dryrun(self,r: RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpGenerateFile(OperationOnFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str,is_to_broadcast=True)</li>
+<li>content(self,r:RoutineOnDirectory) -&gt;str</li>
+<li>target_file_with_content(self,r:RoutineOnDirectory)</li>
+<li>apply(self,r: RoutineOnDirectory)</li>
+<li>dryrun(self,r:RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpGeneratorMac(OpGenerateFile,OpeartionWithShellCall)</dt>
+<dd><ul class="first last">
+<li>__init__(self,script_filename:str,mac_config:str=None,mac_filename: str=None)</li>
+<li>call_args(self,r: RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpgenerateMacTemplate(OpGerateFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str,script:Script)</li>
+<li>content(self,r: RoutineOnDirectory)-&gt;str</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpGeneratorShell(OperationOnFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str,script:Script)</li>
+<li>content(self, r:RoutineOnDirectory) -&gt;</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpGeneratorPhantom(OperationOnFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpSubdirectoriesMake(Operation)</dt>
+<dd><ul class="first last">
+<li>__init__(self,nb_split:int,subdirectory_format:str=”sub.{}”)</li>
+<li>apply(self, r: RoutineOnDirectory)</li>
+<li>dryrun(self, r: RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpBroadcastFile(OperationONsubdirectories)</dt>
+<dd><ul class="first last">
+<li>files_to_broadcast(self,r: RoutineOnDirectory)</li>
+<li>dryrun(self,r:RoutineOnDirectory)</li>
+<li>apply(self,r: RoutineOndirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>OpMerge(OperationOnFile,OperationOnSubdirectories)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str,patterns:Iterable[str])</li>
+<li>sources(self, r:RoutineOnDirectory)</li>
+<li>dryrun(self,r: RoutineOnDirectory) -&gt; JSONStr</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpMergeWithShellCall(OpMerge,OpeartionWithShellCall)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str,patterns:Iterable[str])</li>
+<li>apply(self,r:RoutineOnDirectory)</li>
+<li>dryrun(self,r:RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpMergeHADD(OpMergeWithShellCall)</dt>
+<dd><ul class="first last">
+<li>call_args(self,r: RoutinOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpMergeCat(OpMergeWithShellCall)</dt>
+<dd><ul class="first last">
+<li>call_args(self,r:RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpMergePandasConcatenate(OpMerge)</dt>
+<dd><ul class="first last">
+<li>apply(self,r:RoutineOnDirectory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>OpMErgeSumBinary(OpMerge)</li>
+<li>hadd(work_derectory:Directory,subdirectory_patterns:Iterable[str],source_filenames:Iterable[str],dryrun=False)</li>
+</ul>
+<ul class="simple">
+<li>KEYS</li>
+<li>depens_from_result_dict(r: Dict[str,Any])-&gt;Iterable[int]</li>
+<li>append_depens_to_dict(to_submit:Dict[str,Any],previous_result: Dict[str,Any])</li>
+<li>parse_paths_from_dict(r: Doct[str,Any]) -&gt; Doct[str,Any]</li>
+<li>submit_from_dict(r: Dct[str,Any]) -&gt; Dict[str,Any]</li>
+<li><dl class="first docutils">
+<dt>OpSubmitBroadcast(OperationOnSubdirectories,OperationOnFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename,subdirectory_patterns:Iterable[str])</li>
+<li>to_submit(self, r: RoutineOnDirectory) -&gt; ‘Observable[Dict[str,Any]]’</li>
+<li>apply(self,r:RoutinOnDirectory) -&gt; Dict[str,Iterable[Dict[str,str]]]</li>
+<li>dryrun(self,r :RoutineOnDirectory) -&gt;  Dict[str,Iterable[Dict[str,str]]]</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>OpSubmitSingleFile(OperationOnFile)</dt>
+<dd><ul class="first last">
+<li>__init__(self,filename:str)</li>
+<li>to_submit(self, r:RoutineOnDirectory)</li>
+<li>apply(self,r:RoutineOnDirectory) -&gt;Doct[str,Any]</li>
+<li>dryrunn(self,r:RoutineOnDirectory) -&gt; Dict[str,Any]</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="script">
+<h2>script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="templates">
+<h3>templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>make_mac.j2</li>
+<li>post_run.j2</li>
+<li>run_loacal.j2</li>
+<li>run.j2</li>
+<li>sbatch.j2</li>
+<li>shell.j2</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>__init__.py<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3>base.py<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ObjectWithTemplate(ObjectWithTemplateBase)</li>
+</ul>
+</div>
+<div class="section" id="helper-py">
+<h3>helper.py<a class="headerlink" href="#helper-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>gate_simulation(mac_filename)</li>
+<li>gate_simulation_with_root_analysis(mac_filename,root_filename,analysis_c_filename) <code class="docutils literal"><span class="pre">need</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">corrected</span> <span class="pre">(gete-&gt;gate)</span></code></li>
+</ul>
+</div>
+<div class="section" id="shell-py">
+<h3>shell.py<a class="headerlink" href="#shell-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Script(ObjectWithTemplate)</dt>
+<dd><ul class="first last">
+<li>add_task(self,task)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Task</dt>
+<dd><ul class="first last">
+<li>render()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>TaskWithFileArg(Task)</li>
+<li>GateSimulation(TaskWithFileArg)</li>
+<li><dl class="first docutils">
+<dt>RootAnalysis(TaskWithFileArg)</dt>
+<dd><ul class="first last">
+<li>__init__(self, root_filename, c_file_name)</li>
+<li>render(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>PygateAnalysis(TaskWithFileArg)</dt>
+<dd><ul class="first last">
+<li>__init__(self, source=NOne,target=None,output=None, name=None,analysis_type=None)</li>
+<li>render(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Clean(Task)</dt>
+<dd><ul class="first last">
+<li>render(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Merge(TaskWithFileArg)</li>
+<li><dl class="first docutils">
+<dt>ScriptRun(Script)</dt>
+<dd><ul class="first last">
+<li>__init__(self,work_derectory,tasks: Tuple[Task]=(),geant4_version=‘8.0’,shell=’bash’,is_need_source_env=False,partition=’cpu’)</li>
+<li>add_task(self,task)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ScriptRunLocal(ScriptRun)</dt>
+<dd><ul class="first last">
+<li>__init__(self,work_directory,tasks:Tuple[Task],geant4_version,shell=’bash’,is_nedd_source_env=False,local_work_directory=None,partition=’cpu’)</li>
+<li>add_task(self,task)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ScriptPostRun(Script)</dt>
+<dd><ul class="first last">
+<li>__init__(self,tasks:Tuple[Task]=(),geant4_version=‘8.0’,shell=’bash’,is_need_source_env=False,partition=’cpu’)</li>
+<li>add_task(self,task)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>ScriptMacTemplate(ObjectWithTemplate)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="test">
+<h2>test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="utils">
+<h2>utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>__init__.py<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="object-with-template-py">
+<h3>object_with_template.py<a class="headerlink" href="#object-with-template-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>EnvironmentOfPackage</dt>
+<dd><ul class="first last">
+<li>__init__(self,pkg_name)</li>
+<li>get_or_create_env(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>default_suffix(s: str, suffix: str, is_auto_add_point_prefix=True)</li>
+<li><dl class="first docutils">
+<dt>ObjectWithTemplateBase</dt>
+<dd><ul class="first last">
+<li>template_name(self)</li>
+<li>render(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="strs-py">
+<h3>strs.py<a class="headerlink" href="#strs-py" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="syscall-py">
+<h3>syscall.py<a class="headerlink" href="#syscall-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>shell_call(commands: Iterable[str] or str, is_echo=True)</li>
+</ul>
+</div>
+<div class="section" id="typing-py">
+<h3>typing.py<a class="headerlink" href="#typing-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>JSONStr(str)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>__init__.py<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cleaner-py">
+<h2>cleaner.py<a class="headerlink" href="#cleaner-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Cleaner</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,config)</li>
+<li>clean(self)</li>
+<li>msg(self,path)</li>
+<li>_clean_subs(self)</li>
+<li>_clean_sources(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="conf-py">
+<h2>conf.py<a class="headerlink" href="#conf-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>KEYS</li>
+<li>SUBMIT_KEYS</li>
+<li>CLEAN_KEYS</li>
+<li>ANALYSIS_KEYS</li>
+<li><dl class="first docutils">
+<dt>INIT_KEYS</dt>
+<dd><ul class="first last">
+<li>BROADCAST_KEYS</li>
+<li>EXTERNAL_KEYS</li>
+<li>MAC_KEYS</li>
+<li>SHELL_KEYS</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>PHANTOM_KEYS</li>
+</ul>
+</div>
+<div class="section" id="config-maker-py">
+<h2>config_maker.py<a class="headerlink" href="#config-maker-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>ConfigMaker</dt>
+<dd><ul class="first last">
+<li>_make_pygate_config(cls,fs,target,congfig_filename=None)</li>
+<li>_make_mac_config(cls,fs,target,config=None,mac_config=None)</li>
+<li>make(cls, fs,target,pygate_config=None,mac_config=None)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="config-py">
+<h2>config.py<a class="headerlink" href="#config-py" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="configs-py">
+<h2>configs.py<a class="headerlink" href="#configs-py" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="initializer-py">
+<h2>initializer.py<a class="headerlink" href="#initializer-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Initializer</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,config)</li>
+<li>_copy_sources_from_template(self)</li>
+<li>_make_mac(self)</li>
+<li>_make_phantom(self)</li>
+<li>_sub_dir_name(self,i)</li>
+<li>_nb_sub_dirs(self)</li>
+<li>_make_subdirs(self)</li>
+<li>_make_map_shell_scripts(self)</li>
+<li>_copy_sources_to_subdirs(self)</li>
+<li>pre_sub(self)</li>
+<li>make_sub(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="merger-py">
+<h2>merger.py<a class="headerlink" href="#merger-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Merger</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,config)</li>
+<li>_path_of_file_in_sub_dirs(self,base_filename)</li>
+<li>msg(self,method,target,sources)</li>
+<li>_hadd(self,task)</li>
+<li>_cat(self,task)</li>
+<li>_sum(self,task)</li>
+<li>_copy(self,task)</li>
+<li>merge(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>phantom.py<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>PhantomBinFileMaker:</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,phantom_files)</li>
+<li>_load_data(self,source)</li>
+<li>_make_bin(self,target,data)</li>
+<li>make(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="renderable-py">
+<h2>renderable.py<a class="headerlink" href="#renderable-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Renderable</dt>
+<dd><ul class="first last">
+<li>render(self) -&gt;str</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="service-py">
+<h2>service.py<a class="headerlink" href="#service-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>make_config(target=’.’)</li>
+<li>init(config,method)</li>
+<li>submit(config)</li>
+<li>merge(config)</li>
+<li>clean(config)</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h2>shell.py<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>ShellScriptBase</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,workdir:str, output:str,tasks:list,shell=’zsh’,version=‘7.2’)</li>
+<li>_add_if_gate(self,task)</li>
+<li>_add_if_root(self,task)</li>
+<li>_get_workdir_on_local_and_server(self)</li>
+<li>_make(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ShellScriptMerge(ShellScriptBase)</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,workdir:str,output:str,tasks:list,shell=’zsh’)</li>
+<li>_make(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ShellScriptMaker</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,config)</li>
+<li>make(self)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="submitter-py">
+<h2>submitter.py<a class="headerlink" href="#submitter-py" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Submitter</dt>
+<dd><ul class="first last">
+<li>__init__(self,fs,config)</li>
+<li>_get_map_info(self)</li>
+<li>_get_merge_info(self)</li>
+<li>submit(self)</li>
+<li>_echo(self,info,fout)</li>
+<li>_slurm(self, run_infos,post_infos)</li>
+<li>_hqlf(self,run_infos,post_infos)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h2>utils.py<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>get_scripts_path</li>
+<li>load_script(name)</li>
+<li>sub_dir_filters(config)</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">for function</a><ul>
+<li><a class="reference internal" href="#cli">cli</a><ul>
+<li><a class="reference internal" href="#main-py">main.py</a></li>
+<li><a class="reference internal" href="#analysis-py">analysis.py</a></li>
+<li><a class="reference internal" href="#clean-py">clean.py</a></li>
+<li><a class="reference internal" href="#initialize-py">initialize.py</a></li>
+<li><a class="reference internal" href="#mac-generate-py">mac_generate.py</a></li>
+<li><a class="reference internal" href="#merge-py">merge.py</a></li>
+<li><a class="reference internal" href="#submit-py">submit.py</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis">analysis</a><ul>
+<li><a class="reference internal" href="#init-py">__init__.py</a></li>
+<li><a class="reference internal" href="#predifined-py">predifined.py</a></li>
+<li><a class="reference internal" href="#results-py">results.py</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api">api</a><ul>
+<li><a class="reference internal" href="#id5">cli</a><ul>
+<li><a class="reference internal" href="#base-py">base.py</a></li>
+<li><a class="reference internal" href="#commands-py">commands.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#archive">archive</a></li>
+<li><a class="reference internal" href="#components">components</a><ul>
+<li><a class="reference internal" href="#geometry">geometry</a><ul>
+<li><a class="reference internal" href="#geometry-py">geometry.py</a></li>
+<li><a class="reference internal" href="#phantom-py">phantom.py</a></li>
+<li><a class="reference internal" href="#surface-py">surface.py</a></li>
+<li><a class="reference internal" href="#volume-py">volume.py</a></li>
+<li><a class="reference internal" href="#camera">camera</a><ul>
+<li><a class="reference internal" href="#id6">__init__.py</a></li>
+<li><a class="reference internal" href="#camera-py">camera.py</a></li>
+<li><a class="reference internal" href="#system-py">system.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#template">template</a><ul>
+<li><a class="reference internal" href="#digitizer">digitizer</a></li>
+<li><a class="reference internal" href="#id7">geometry</a></li>
+<li><a class="reference internal" href="#misc">misc</a></li>
+<li><a class="reference internal" href="#parameter">parameter</a></li>
+<li><a class="reference internal" href="#physics">physics</a></li>
+<li><a class="reference internal" href="#source">source</a></li>
+<li><a class="reference internal" href="#simulation-j2">simulation.j2</a></li>
+<li><a class="reference internal" href="#test-j2">test.j2</a></li>
+<li><a class="reference internal" href="#utils-j2">utils.j2</a></li>
+<li><a class="reference internal" href="#vec3-j2">vec3.j2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">__init__.py</a></li>
+<li><a class="reference internal" href="#id9">base.py</a></li>
+<li><a class="reference internal" href="#digitizer-py">digitizer.py</a></li>
+<li><a class="reference internal" href="#misc-py">misc.py</a></li>
+<li><a class="reference internal" href="#parameter-py">parameter.py</a></li>
+<li><a class="reference internal" href="#physics-py">physics.py</a></li>
+<li><a class="reference internal" href="#simulation-py">simulation.py</a></li>
+<li><a class="reference internal" href="#source-py">source.py</a></li>
+<li><a class="reference internal" href="#utils-py">utils.py</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#predefined">predefined</a></li>
+<li><a class="reference internal" href="#routine">routine</a></li>
+<li><a class="reference internal" href="#script">script</a><ul>
+<li><a class="reference internal" href="#templates">templates</a></li>
+<li><a class="reference internal" href="#id10">__init__.py</a></li>
+<li><a class="reference internal" href="#id11">base.py</a></li>
+<li><a class="reference internal" href="#helper-py">helper.py</a></li>
+<li><a class="reference internal" href="#shell-py">shell.py</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#test">test</a></li>
+<li><a class="reference internal" href="#utils">utils</a><ul>
+<li><a class="reference internal" href="#id12">__init__.py</a></li>
+<li><a class="reference internal" href="#object-with-template-py">object_with_template.py</a></li>
+<li><a class="reference internal" href="#strs-py">strs.py</a></li>
+<li><a class="reference internal" href="#syscall-py">syscall.py</a></li>
+<li><a class="reference internal" href="#typing-py">typing.py</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">__init__.py</a></li>
+<li><a class="reference internal" href="#cleaner-py">cleaner.py</a></li>
+<li><a class="reference internal" href="#conf-py">conf.py</a></li>
+<li><a class="reference internal" href="#config-maker-py">config_maker.py</a></li>
+<li><a class="reference internal" href="#config-py">config.py</a></li>
+<li><a class="reference internal" href="#configs-py">configs.py</a></li>
+<li><a class="reference internal" href="#initializer-py">initializer.py</a></li>
+<li><a class="reference internal" href="#merger-py">merger.py</a></li>
+<li><a class="reference internal" href="#id14">phantom.py</a></li>
+<li><a class="reference internal" href="#renderable-py">renderable.py</a></li>
+<li><a class="reference internal" href="#service-py">service.py</a></li>
+<li><a class="reference internal" href="#id15">shell.py</a></li>
+<li><a class="reference internal" href="#submitter-py">submitter.py</a></li>
+<li><a class="reference internal" href="#id16">utils.py</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Text.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Pygate 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, vince.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
+    </div>
+  </body>
+</html>

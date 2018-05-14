@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>First step of pygate &#8212; Pygate 1.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -24,16 +24,27 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pygate" href="example.html" />
-    <link rel="prev" title="Installation" href="install.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="Installation" href="install.html" /> 
   </head>
   <body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="example.html" title="pygate"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Pygate 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -46,10 +57,7 @@
 <div class="section" id="file-main-mac-generates">
 <span id="file-generators"></span><h2>1. File <code class="docutils literal"><span class="pre">main.mac</span></code> generates.<a class="headerlink" href="#file-main-mac-generates" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Before a <em>GATE</em> process,we generally need to make a file of <code class="docutils literal"><span class="pre">main.mac</span></code> ,</li>
-</ul>
-<p>in which we can set the compomnents( <em>world,system,phantom,soure and digitizer etc.</em> ) for <em>GATE</em> simulation.</p>
-<ul class="simple">
+<li>Before a <em>GATE</em> process,we generally need to make a file of <code class="docutils literal"><span class="pre">main.mac</span></code> ,in which we can set the compomnents( <em>world,system,phantom,soure and digitizer etc.</em> ) for <em>GATE</em> simulation.</li>
 <li>The question is that the definition of compomnents is too heavy and complicated.
 A lot of time and ennergy wastes on this.</li>
 <li><em>Pygate</em> offers a function of <strong>File Gnetators</strong> .Users can confirured the compomnents easily
@@ -79,7 +87,7 @@ A file of <code class="docutils literal"><span class="pre">mac.yml</span></code>
 <dt>Users should know the following steps to archive it:</dt>
 <dd><ol class="first last arabic">
 <li><dl class="first docutils">
-<dt>Users should get the needed configured files by excuting this command: <code class="docutils literal"><span class="pre">$</span> <span class="pre">pygate</span> <span class="pre">ini</span> <span class="pre">ext</span></code> .You will get the files in folder:</dt>
+<dt>Users should get the needed configured files by excuting this command: <code class="docutils literal"><span class="pre">$</span> <span class="pre">pygate</span> <span class="pre">init</span> <span class="pre">ext</span></code> .You will get the files in folder:</dt>
 <dd><ul class="first last">
 <li><code class="docutils literal"><span class="pre">main.mac</span></code> ,you get it last in the fomer.</li>
 <li><code class="docutils literal"><span class="pre">GateMaterials.db</span></code> ,significant file for <em>GATE</em> configuration,can’t be lack.</li>
@@ -133,15 +141,13 @@ A file of <code class="docutils literal"><span class="pre">mac.yml</span></code>
 </ul>
 </li>
 </ul>
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="install.html" title="previous chapter">Installation</a></li>
-      <li>Next: <a href="example.html" title="next chapter">pygate</a></li>
-  </ul></li>
-</ul>
-</div>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Installation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="example.html"
+                        title="next chapter">pygate</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -163,20 +169,27 @@ A file of <code class="docutils literal"><span class="pre">mac.yml</span></code>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2018, vince.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="_sources/first.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="example.html" title="pygate"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Pygate 1.0.0 documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, vince.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
+    </div>
   </body>
 </html>

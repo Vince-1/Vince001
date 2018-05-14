@@ -34,3 +34,8 @@ Shell script generator
 
 
 """
+
+def foo(a):
+    """
+    Test function.
+    """

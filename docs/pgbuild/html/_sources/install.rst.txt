@@ -38,7 +38,7 @@ How to get pygate and configuration
         + ``pip install dxl-pygate``
     
     4. Configured *GATE*
-        + ``soure/hqlf/softewares/moudle/simu8.0.sh``
+        + ``source soure/hqlf/softewares/moudle/simu8.0.sh``
 
     5. You have made *pygate* ready.Go to the :ref:`First step of pygate`.
 
@@ -48,7 +48,11 @@ How to get pygate and configuration
       
     
 
+`Github`_   `Anaconda`_ 
+
 
 .. _Github: https://github.com/Hong-Xiang/pygate.git
 .. _Github Guides: https://guides.github.com/activities/hello-world
 .. _Anaconda: https://www.anaconda.com/download/#linux
+
+
